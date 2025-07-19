@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mobile Price Predictor</title>
+    <style>
+        body { font-family: sans-serif; }
+        form { display: grid; grid-template-columns: auto 1fr; gap: 15px; max-width: 700px; align-items: center;}
+        label { font-weight: bold; text-align: right; }
+        .hint { font-weight: normal; color: #666; font-size: 0.9em; }
+        input { padding: 8px; border: 1px solid #ccc; border-radius: 4px; }
+        button { grid-column: span 2; padding: 10px; font-size: 16px; background-color: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer;}
+        h1 { text-align: center; }
+        h2 { text-align: center; color: #28a745; }
+    </style>
+</head>
+<body>
+    <h1>Mobile Price Range Predictor</h1>
+    <form action="{{ url_for('predict') }}" method="post">
+        
+        <label>Battery Power <span class="hint">(500-2000 mAh)</span>:</label>
+        <input type="number" name="battery_power" required="required">
+        
+        <label>Bluetooth <span class="hint">(0=No, 1=Yes)</span>:</label>
+        <input type="number" name="blue" required="required" min="0" max="1">
+
+        <label>Clock Speed <span class="hint">(0.5-3.0 GHz)</span>:</label>
+        <input type="number" step="0.1" name="clock_speed" required="required">
+
+        <label>Dual SIM <span class="hint">(0=No, 1=Yes)</span>:</label>
+        <input type="number" name="dual_sim" required="required" min="0" max="1">
+
+        <label>Front Camera <span class="hint">(0-20 MP)</span>:</label>
+        <input type="number" name="fc" required="required">
+
+        <label>4G <span class="hint">(0=No, 1=Yes)</span>:</label>
+        <input type="number" name="four_g" required="required" min="0" max="1">
+
+        <label>Internal Memory <span class="hint">(2-64 GB)</span>:</label>
+        <input type="number" name="int_memory" required="required">
+
+        <label>Mobile Depth <span class="hint">(0.1-1.0 cm)</span>:</label>
+        <input type="number" step="0.1" name="m_dep" required="required">
+
+        <label>Mobile Weight <span class="hint">(80-200 g)</span>:</label>
+        <input type="number" name="mobile_wt" required="required">
+
+        <label>Number of Cores <span class="hint">(1-8)</span>:</label>
+        <input type="number" name="n_cores" required="required">
+
+        <label>Primary Camera <span class="hint">(0-20 MP)</span>:</label>
+        <input type="number" name="pc" required="required">
+        
+        <label>Pixel Height <span class="hint">(0-1960 px)</span>:</label>
+        <input type="number" name="px_height" required="required">
+
+        <label>Pixel Width <span class="hint">(500-2000 px)</span>:</label>
+        <input type="number" name="px_width" required="required">
+
+        <label>RAM <span class="hint">(250-4000 MB)</span>:</label>
+        <input type="number" name="ram" required="required">
+
+        <label>Screen Height <span class="hint">(5-19 cm)</span>:</label>
+        <input type="number" name="sc_h" required="required">
+
+        <label>Screen Width <span class="hint">(0-18 cm)</span>:</label>
+        <input type="number" name="sc_w" required="required">
+
+        <label>Talk Time <span class="hint">(2-20 hours)</span>:</label>
+        <input type="number" name="talk_time" required="required">
+
+        <label>3G <span class="hint">(0=No, 1=Yes)</span>:</label>
+        <input type="number" name="three_g" required="required" min="0" max="1">
+
+        <label>Touch Screen <span class="hint">(0=No, 1=Yes)</span>:</label>
+        <input type="number" name="touch_screen" required="required" min="0" max="1">
+
+        <label>WiFi <span class="hint">(0=No, 1=Yes)</span>:</label>
+        <input type="number" name="wifi" required="required" min="0" max="1">
+
+        <button type="submit">Predict</button>
+    </form>
+    <br>
+    <h2>{{ prediction_text }}</h2>
+</body>
+</html>

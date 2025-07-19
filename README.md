@@ -4,12 +4,9 @@ A web application built with Flask that predicts the price range of a mobile pho
 
 ## ✨ Live Demo
 
-**(Optional but highly recommended)** If you deploy your app, put the link here.
+You can view and interact with the live application here:
 
-* **You can view and interact with the live application here: [Link to your deployed app]**
-
-![Demo GIF](link_to_your_demo_gif.gif) 
-*(Pro Tip: Create a short screen recording of your app and save it as a GIF to show it off!)*
+* **[Live Demo](https://mobile-price-range-prediction-app.onrender.com)**
 
 ---
 
@@ -17,7 +14,7 @@ A web application built with Flask that predicts the price range of a mobile pho
 
 * **Backend:** Python, Flask
 * **Machine Learning:** Scikit-learn, Pandas, NumPy
-* **Deployment:** (e.g., PythonAnywhere, Heroku, etc. - if you deploy it)
+* **Deployment:** Render
 
 ---
 
@@ -27,11 +24,11 @@ To get a local copy up and running, follow these simple steps.
 
 1.  **Clone the repository**
     ```sh
-    git clone [https://github.com/YourUsername/your-repo-name.git](https://github.com/YourUsername/your-repo-name.git)
+    git clone [https://github.com/adityagangwani30/mobile-price-range-prediction-app.git](https://github.com/adityagangwani30/mobile-price-range-prediction-app.git)
     ```
 2.  **Navigate to the project directory**
     ```sh
-    cd your-repo-name
+    cd mobile-price-range-prediction-app
     ```
 3.  **Install the required packages**
     ```sh
@@ -48,13 +45,21 @@ To get a local copy up and running, follow these simple steps.
 ## 📂 Project Structure
 ├── app.py              # Main Flask application script
 ├── model.joblib        # The pre-trained machine learning model
+├── model.ipynb         # Jupyter Notebook for model training and evaluation
 ├── requirements.txt    # List of required Python packages
 ├── templates/
 │   └── index.html      # The HTML template for the user interface
-└── .gitignore          # Files for Git to ignore
+└── static/
+└── style.css       # CSS styles for the application
+---
 
 ## 📊 Dataset
 
-This project uses the "Mobile Price Classification" dataset, which can be found on Kaggle.
+This project uses the "Mobile Price Classification" dataset, which contains various mobile phone specifications and their associated price range. The price range is categorized into four classes:
+
+* **0:** Low Cost
+* **1:** Medium Cost
+* **2:** High Cost
+* **3:** Very High Cost
 
 * **Link to Dataset:** [https://www.kaggle.com/datasets/iabhishekofficial/mobile-price-classification](https://www.kaggle.com/datasets/iabhishekofficial/mobile-price-classification)

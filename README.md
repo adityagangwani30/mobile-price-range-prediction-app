@@ -43,16 +43,18 @@ To get a local copy up and running, follow these simple steps.
 ---
 
 ## 📂 Project Structure
-├── app.py              # The main Flask application script
-├── model.joblib        # The pre-trained machine learning model
-├── model.ipynb         # Jupyter Notebook for model training and evaluation
-├── requirements.txt    # List of required Python packages
-├── train.csv           # The training dataset
-├── test.csv            # The test dataset
-├── .gitignore          # Specifies files for Git to ignore
-├── README.md           # The project's documentation file
-└── templates/
-    └── index.html      # The HTML template for the user interface
+| File / Folder | Description |
+|---|---|
+| `app.py` | The main Flask application script. |
+| `model.joblib` | The pre-trained machine learning model. |
+| `model.ipynb` | Jupyter Notebook for model training and evaluation. |
+| `requirements.txt` | List of required Python packages for deployment. |
+| `train.csv` | The training dataset. |
+| `test.csv` | The test dataset for final predictions. |
+| `.gitignore` | Specifies which files and folders for Git to ignore. |
+| `README.md` | The project's documentation file. |
+| `templates/` | Folder containing all HTML templates. |
+| `└── index.html` | The HTML template for the main user interface. |
 
 ## 📊 Dataset
 
